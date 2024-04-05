@@ -1,0 +1,31 @@
+<mat-drawer-container autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" opened="true">
+    <side-bar></side-bar>
+  </mat-drawer>
+
+  <div class="outputs">
+
+    <div class="header">
+      <h3 class="dashboard poppins-semibold" [contentEditable]="true">Dashboard Name</h3>
+      <div class="avatar">
+        <img src="assets/images/Blank-Avatar.png" alt="">
+      </div>
+    </div>
+
+    @if(isDashboard) {
+    <div>
+
+    </div>
+    } @else {
+    <div class="d-grid">
+      <img src="assets/images/Analytics 1.svg" alt="">
+
+      <button mat-raised-button class="w-25">
+        Upload data to view dashboard
+      </button>
+    </div>
+    }
+
+  </div>
+
+</mat-drawer-container>

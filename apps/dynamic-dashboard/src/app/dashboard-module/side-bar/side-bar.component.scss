@@ -1,0 +1,26 @@
+.side-bar {
+  background-color: #011222;
+  width: 280px;
+  height: 100dvh;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  padding-top: 0;
+
+  .logo {
+
+    img {
+      height: 100px;
+      width: 280px;
+    }
+  }
+
+  .navs {
+    height: 40px;
+    padding: 0 1rem;
+    color: #011222;
+    background: white;
+    border-radius: 8px;
+  }
+}

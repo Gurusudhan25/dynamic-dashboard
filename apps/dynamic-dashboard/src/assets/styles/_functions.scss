@@ -1,0 +1,29 @@
+
+@function map-oc-to-mat($oc-color) {
+  @return (
+    50: map-get($oc-color, 50),
+    100: map-get($oc-color, 100),
+    200: map-get($oc-color, 200),
+    300: map-get($oc-color, 300),
+    400: map-get($oc-color, 400),
+    500: map-get($oc-color, 500),
+    600: map-get($oc-color, 600),
+    700: map-get($oc-color, 700),
+    800: map-get($oc-color, 800),
+    900: map-get($oc-color, 900),
+    1000: map-get($oc-color, 1000),
+    contrast: (
+      50: $dark-primary-text,
+      100: $dark-primary-text,
+      200: $dark-primary-text,
+      300: $dark-primary-text,
+      400: $dark-primary-text,
+      500: $light-primary-text,
+      600: $light-primary-text,
+      700: $light-primary-text,
+      800: $light-primary-text,
+      900: $light-primary-text,
+      1000: $light-primary-text,
+    )
+  );
+}

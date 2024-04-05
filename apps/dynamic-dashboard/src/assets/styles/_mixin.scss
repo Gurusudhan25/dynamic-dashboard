@@ -1,0 +1,27 @@
+$breakpoints: (
+  tiny: 0,
+  small: 470px,
+  medium: 736px,
+  large: 1024px,
+  xlarge: 1200px,
+);
+
+@mixin breakpoint($size, $up-down) {
+  $size-value: map-get($breakpoints, $size);
+
+  @if $up-down == up {
+    @media (min-width: $size-value) {
+      @content;
+    }
+  } 
+
+  @if $up-down == down {
+    @media (max-width: ($size-value - 0.02)) {
+      @content;
+    }
+  } 
+  
+  @else {
+    @warn "Invalid argument for $up-down: Use 'up' or 'down'.";
+  }
+}
