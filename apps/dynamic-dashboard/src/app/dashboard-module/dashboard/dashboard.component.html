@@ -6,18 +6,13 @@
   <div class="outputs">
 
     <div class="header">
-      <h3 class="dashboard poppins-semibold" [contentEditable]="true">Dashboard Name</h3>
-      <div class="avatar">
-        <img src="assets/images/Blank-Avatar.png" alt="">
-      </div>
+      <h3 class="dashboard poppins-semibold" [contentEditable]="true">Details</h3>
     </div>
 
-    @if(isDashboard) {
+    @if(false) {
     <div>
-      <app-bar-chart></app-bar-chart>
-      <app-pie-chart></app-pie-chart>
-      <app-line-chart></app-line-chart>
     </div>
+      <dashboard-detail></dashboard-detail>
     } @else {
     <div>
       <div class="d-flex align-items-center h-100 w-100 justify-content-center">

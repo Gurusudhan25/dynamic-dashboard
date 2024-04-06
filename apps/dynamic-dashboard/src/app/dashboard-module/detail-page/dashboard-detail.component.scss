@@ -1,0 +1,35 @@
+
+.details {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  canvas: {
+    width: 100%;
+    height: 100%;
+  }
+
+  .match-details {
+    display: flex;
+    gap: 5rem;
+
+    img {
+      width: 500px;
+      height: 247px;
+    }
+
+    mat-card {
+      height: 100%;
+      padding: 0 1rem;
+
+      .gap-5 {
+        gap: 8rem !important;
+      }
+    }
+  }
+}
+
+p {
+  margin-bottom: 8px;
+}

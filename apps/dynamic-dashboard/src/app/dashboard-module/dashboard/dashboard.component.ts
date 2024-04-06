@@ -9,6 +9,7 @@ import { UploadDialogComponent } from '../../libs/upload-dialog/upload-dialog.co
 import { BarChartComponent } from '../../libs/charts/bar-chart/bar-chart.component';
 import { PieChartComponent } from '../../libs/charts/pie-chart/pie-chart.component';
 import { LineChartComponent } from '../../libs/charts/line-chart/line-chart.component';
+import { DashboardDetailComponent } from '../detail-page/dashboard-detail.component';
 
 @Component({
   selector: 'dashboard',
@@ -24,6 +25,8 @@ import { LineChartComponent } from '../../libs/charts/line-chart/line-chart.comp
     BarChartComponent,
     PieChartComponent,
     LineChartComponent,
+    MatButtonModule,
+    DashboardDetailComponent
   ],
   standalone: true,
 })
