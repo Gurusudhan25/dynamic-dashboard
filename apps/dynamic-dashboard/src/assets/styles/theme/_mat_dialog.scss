@@ -1,0 +1,56 @@
+/* Material Dialog Modal style overwrite here */
+.mat-mdc-dialog-container {
+  border-radius: 10px !important;
+
+  .mat-mdc-dialog-title {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #0c121d;
+  }
+
+  margin: 0;
+  font-family: 'Plus Jakarta Sans',
+  sans-serif !important;
+}
+
+.close-icon {
+  color: #0c121d;
+  cursor: pointer;
+}
+
+.dialog-info {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #61656c;
+}
+
+.mat-mdc-dialog-actions {
+  min-height: unset;
+  margin-bottom: 0;
+  padding: 24px 0 0 0;
+
+  .mat-button-base+.mat-button-base {
+    margin-left: 12px;
+  }
+}
+
+
+.support-contract-dialog .mat-mdc-dialog-container {
+  .mat-mdc-dialog-content {
+    max-height: calc(100vh - 100px);
+  }
+}
+
+.view-action-dialog {
+  .mat-mdc-dialog-content {
+    overflow: unset;
+  }
+}
+
+.change-admin-role {
+  .mat-mdc-dialog-content {
+    overflow: unset;
+  }
+}

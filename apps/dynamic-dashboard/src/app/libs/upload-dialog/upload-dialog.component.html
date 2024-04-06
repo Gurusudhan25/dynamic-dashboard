@@ -1,0 +1,60 @@
+<div class="d-flex align-items-center justify-content-between mb-4">
+    <p mat-dialog-title>Upload file</p>
+    <mat-icon (click)="closeDialog()" class="close-icon">close</mat-icon>
+</div>
+
+
+@if(!isLoading) {
+
+<div mat-dialog-content cdkFocusInitial>
+    <div class="mt-2 d-flex align-items-center">
+        <mat-radio-group [(ngModel)]="uploadType" name="uploadType" class="d-flex">
+            <div class="w-50 d-flex firmType mr-2 cgn-firm cursor">
+                <mat-radio-button value="file" (click)="uploadType = 'file'"></mat-radio-button>
+                <div class="text-left">
+                    <h4 class="small-heading pb-2"> Upload File</h4>
+                </div>
+            </div>
+            <div class="w-50 d-flex firmType cgn-firm cursor">
+                <mat-radio-button value="url" (click)="uploadType = 'url'"></mat-radio-button>
+                <div class="text-left">
+                    <h4 class="small-heading pb-2"> DB URL </h4>
+                </div>
+            </div>
+        </mat-radio-group>
+    </div>
+
+    @if(uploadType === 'file') {
+    <div>
+        {{ documents.name }}
+        <button type="button" class="upload-button" mat-flat-button color="secondary" (click)="fileUpload.click()">
+            <i class="material-icons">upload</i>
+            Upload
+        </button>
+        <input hidden="true" [multiple]="false" accept=".json,.csv,.txt" type="file" #fileUpload
+            (click)="fileUpload.value = ''" value="" id="fileRef" name="{{ 'DocumentUpload' }}"
+            (input)="uploadDocument($event)" />
+    </div>
+    } @else {
+    <div class="mt-2 d-flex">
+        <input matInput [(ngModel)]="dbUrl" placeholder="Enter DB connection url here" #dbUrlRef="ngModel"
+            name="dbUrl" />
+    </div>
+    }
+</div>
+} @else {
+<div class="align-items-center d-flex justify-content-center mb-4">
+    <mat-spinner></mat-spinner>
+</div>
+}
+
+<div mat-dialog-actions align="end">
+    <div class="mr-2">
+        <button mat-stroked-button (click)="closeDialog()" color="accent">Cancel</button>
+    </div>
+    <div>
+        <button mat-flat-button color="primary" (click)="generateDashboard()">
+            Generate Dashboard
+        </button>
+    </div>
+</div>
