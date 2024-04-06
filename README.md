@@ -18,4 +18,4 @@ https://www.figma.com/file/wHtFGYRNgwkyGlffsCvS0m/D2D-CRM?type=design&node-id=2%
 ![alt text](image-1.png)
 
 # Proposed Architecture Diagram
-![alt text](image-2.png)
+![alt text](image-3.png)
