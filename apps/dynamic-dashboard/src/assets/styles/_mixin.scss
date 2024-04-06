@@ -25,3 +25,10 @@ $breakpoints: (
     @warn "Invalid argument for $up-down: Use 'up' or 'down'.";
   }
 }
+
+@mixin font($size, $lineHeight, $weight, $color) {
+  font-size: $size;
+  line-height: $lineHeight;
+  font-weight: $weight;
+  color: $color;
+}
